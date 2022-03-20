@@ -12,6 +12,7 @@ function isTouching(a, b) {
 
 const player = document.querySelector("#player");
 const coin = document.querySelector("#coin");
+const coinAmount = document.querySelector("h1");
 
 window.addEventListener("keypress", function (e) {
   if (e.key === "s" || e.key === "Down") {
@@ -32,6 +33,7 @@ window.addEventListener("keypress", function (e) {
 
   if (isTouching(player, coin)) {
     moveCoin();
+    coinAmount.innerText++;
   }
 });
 
